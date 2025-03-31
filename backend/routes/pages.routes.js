@@ -37,7 +37,7 @@ router.get('/about-us', (req, res) => {
 });
 
 router.get('/our-team', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../frontend/our-team/our-team.html'));
+  res.sendFile(path.join(__dirname, '../../public/our-team/our-team.html'));
 });
 
 router.get('/privacy-policy', (req, res) => {
@@ -49,7 +49,7 @@ router.get('/terms-of-use', (req, res) => {
 });
 
 router.get('/our-plans', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../frontend/our-plans/our-plans.html'));
+  res.sendFile(path.join(__dirname, '../../public/our-plans/our-plans.html'));
 });
 
 router.get('/wise-investing', (req, res) => {
