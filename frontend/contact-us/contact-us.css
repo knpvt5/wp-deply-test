@@ -1,0 +1,143 @@
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+/* Header styles */
+header {
+  background-color: #000;
+  /* color: #ffffff; */
+  text-align: center;
+  position: fixed;
+  top: 0;
+  /* left: 0; */
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+/* body.dark-mode header {
+  background-color: #1e1e1e;
+} */
+
+
+header h1 {
+  font-size: 30px;
+  /* padding: 1rem; */
+  color: #fff;
+  margin-top: 10px;
+  padding-top: 5px;
+  /* font-weight: bold; */
+}
+
+body.dark-mode header h1 {
+  color: #ffffff;
+}
+
+.brand-logo {
+  height: 60px;
+  width: auto;
+  top: 5px;
+  left: 5px;
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    /* margin-top: 0px; */
+    font-size: 25px;
+    margin-left: 60px;
+  }
+
+  .brand-logo {
+    height: 50px;
+    width: auto;
+    top: 5px;
+    left: 0px;
+  }
+}
+
+/* main styling-- */
+#contact-section {
+  display: flex;
+  margin: 30px auto;
+  max-width: 100%;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 100px;
+  justify-content: center;
+}
+
+#contact-info {
+  width: 600px;
+  max-width: 600px;
+  /* margin-right: clamp(10px, calc(-10px + 10vw), 20px); */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-info a {
+  /* color: #000; */
+  text-decoration: none;
+}
+
+#contact-form {
+  width: 600px;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form iframe {
+  margin: 0 auto;
+}
+
+body.dark-mode #contact-info, 
+body.dark-mode #contact-form {
+  background-color: #333333;
+  color: #e0e0e0;
+  border: 2px solid #666;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode #contact-info a, 
+body.dark-mode #contact-form a {
+  color: #4693FF;
+}
+
+/* body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+} */
+
+
+/*for mobile and smaller screen styling*/
+@media (max-width: 768px) {
+
+  #contact-section {
+    margin-top: 65px;
+    padding: 20px;
+  }
+
+  textarea {
+    max-width: 92%;
+  }
+
+  #contact-form iframe {
+    max-width: 100%;
+  }
+}
+
+/* Footer styles via global footer css*/

@@ -1,0 +1,54 @@
+{
+  "name": "wealthpsychology-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0",
+    "start": "server.js",
+    "dev": "nodemon server.js",
+    "pm2": "pm2-runtime start ecosystem.config.cjs"
+  },
+  "author": {
+    "name": "wealthpsychology",
+    "email": "contact@wealthpsychology.in",
+    "url": "http://wealthpsychology.in"
+  },
+  "keywords": [
+    "finance",
+    "psychology",
+    "wealth management",
+    "personal growth"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^17.0.0",
+    "@contentful/rich-text-types": "^17.0.0",
+    "axios": "^1.7.4",
+    "cheerio": "^1.0.0",
+    "circular-json": "^0.5.9",
+    "contentful": "^11.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-openid-connect": "^2.18.0",
+    "html-entities": "^2.5.2",
+    "openai": "^4.75.0",
+    "pg": "^8.13.0",
+    "pm2": "^5.4.2",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "tailwindcss": "^3.4.11"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "description": ""
+}

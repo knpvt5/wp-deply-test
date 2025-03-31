@@ -1,0 +1,175 @@
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #001531;
+}
+/* body.dark-mode {
+  background-color: #001531;
+  color: #e0e0e0;
+}
+ */
+  /* Header styles via header components*/
+
+
+/* main content styling  */
+
+.bosm-container {
+  max-width: 750px;
+  width: 100%;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+  border-radius: 10px;
+}
+
+.bosm-container section {
+  margin-bottom: 20px;
+  background-color: #afd2dd;
+  padding: 2px 15px 25px 15px;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+}
+/* body.dark-mode .bosm-container section {
+  background-color: #002658;
+} */
+
+.bosm-container h2 {
+  color: #333;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+/* body.dark-mode .bosm-container h2 {
+  color: #e0e0e0;
+} */
+
+details {
+  padding-left: 30px;
+  padding-right: 50px;
+}
+
+/* Base styles for the details summary */
+details summary {
+  padding: 10px;
+  background-color: #f9f9f9;
+  margin: 5px 0;
+  border-left: 5px solid #0077ff;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+/* body.dark-mode details summary {
+  background-color: #444;
+  color: #e0e0e0;
+  border-left-color: #0077ff; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+} */
+
+
+/* Style when the summary is hovered or focused */
+details summary:hover,
+details summary:focus {
+  background-color: #003f92;
+  color: white;
+}
+/* body.dark-mode details summary:hover,
+body.dark-mode details summary:focus {
+  background-color: #003f92;
+  color: #e0e0e0;
+} */
+
+/* Change background color when the details element is open */
+details[open] summary {
+  background-color: #034fa0;
+  color: white;
+}
+/* body.dark-mode details[open] summary {
+  background-color: #034fa0;
+  color: #e0e0e0;
+} */
+
+/* List styles inside .bosm-container */
+.bosm-container ul {
+  margin-top: 0;
+  padding-left: 20px; 
+  list-style-position: inside; 
+  padding-right: 30px; 
+}
+
+.bosm-container ul li {
+  background-color: #f9f9f9;
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-left: 5px solid #FF9800;
+  color: #555;
+  cursor: pointer;
+  border-radius: 5px;
+  text-indent: -10px; 
+  padding-left: 20px; 
+}
+/* body.dark-mode .bosm-container ul li {
+  background-color: #444;
+  color: #ddd;
+  border-left-color: #FF9800;
+} */
+
+.bosm-container ul li:hover {
+  background-color: #935800;
+  color: white;
+}
+/* body.dark-mode .bosm-container ul li:hover {
+  background-color: #935800;
+  color: #fff;
+} */
+
+/* Style for the bullet point */
+.bosm-container ul li::marker {
+  font-size: 1.3em;
+}
+
+
+@media (max-width: 768px) {
+  .bosm-container {
+    /* max-width: 100%; */
+    width: 90%;
+    margin-top: 50px;
+  }
+
+  .bosm-container h2 {
+    font-size: 1.1em;
+  }
+
+  details {
+    padding-left: 15px;
+    padding-right: 10px;
+  }
+
+  details summary {
+    font-size: 15px;
+  }
+
+  .bosm-container ul {
+    margin-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

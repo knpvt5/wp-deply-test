@@ -1,0 +1,184 @@
+/* Reset some default styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ccc;
+}
+body.dark-mode {
+  background-color: #222; 
+  /* color: #e0e0e0;  */
+}
+
+
+/* Header Styling */
+h1 {
+  margin: 0 auto;
+  font-size: 3rem; /* Larger font size for emphasis */
+  color: #fff; /* White text color */
+  /* max-width: 400px; */
+  /* width: 100%; */
+  text-align: center;
+  /* margin-top: 50px; */
+  font-family: 'Times New Roman', Times, serif;
+  margin: -10px -10px 0 -10px;
+  margin-bottom: 40px;
+  padding: 10px 10px;
+  background: linear-gradient(45deg, #4caf50, #2196f3); /* Gradient background */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  animation: glow 1.5s infinite alternate; /* Glowing effect */
+}
+
+/* Animation for glowing effect */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #4caf50, 0 0 20px #2196f3, 0 0 30px #4caf50;
+  }
+  to {
+    box-shadow: 0 0 20px #4caf50, 0 0 30px #2196f3, 0 0 40px #4caf50;
+  }
+}
+
+main {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Container Styling */
+#cagr-calculator-container {
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 125px;
+  margin-bottom: 45px;
+  padding: 20px;
+  border-radius: 10px;
+  /* border: 1px solid #000; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+body.dark-mode #cagr-calculator-container {
+  background-color: #444; 
+  box-shadow: 0 4px 8px #555;
+}
+
+/* Form Label Styling */
+form label {
+  font-size: 1rem;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+body.dark-mode form label {
+  color: #e0e0e0; 
+}
+
+/* Form Input Styling */
+form input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+body.dark-mode form input {
+  background-color: #333; 
+  color: #fff; 
+  border: 1px solid #555; 
+}
+
+/* Button Styling */
+form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: blue;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+body.dark-mode form button {
+  background-color: #007bff; 
+}
+
+form button:hover {
+  background-color: #2196f3;
+}
+body.dark-mode form button:hover {
+  background-color: #006bb3; 
+}
+
+/* Table Styles */
+.result table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.result th {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-size: 18px;
+  border-radius: 5px 5px 0 0;
+}
+body.dark-mode .result th {
+  background-color: #007bff; 
+}
+
+.result td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+body.dark-mode .result td {
+  background-color: #444; 
+  color: #e0e0e0; 
+}
+
+.result td:first-child {
+  font-weight: bold;
+  color: #333;
+  background-color: #eee;
+  width: 70%;
+}
+
+.result td:last-child {
+  text-align: right;
+  color: #555;
+}
+
+/* Responsive Styling */
+@media (max-width: 480px) {
+  main {
+    /* margin: 10px; */
+    padding: 0px;
+  }
+
+  #cagr-calculator-container {
+    margin: 0 15px;
+    margin-top: 75px;
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  form label {
+    font-size: 0.9rem;
+  }
+
+  form input,
+  form button {
+    font-size: 0.9rem;
+  }
+}

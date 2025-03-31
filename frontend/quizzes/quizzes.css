@@ -1,0 +1,212 @@
+/* Overall body styling */
+body {
+  font-family: Arial, sans-serif;
+  /* background: linear-gradient(135deg, #e6f7ff, #fff7e6, #e6ffe6, #ffe6f7, #f7e6ff); */
+  background: linear-gradient(135deg, #002333, #342400, #003800, #380027, #260037);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+header h1 {
+  font-size: 30px;
+  text-align: center;
+  /* padding: 5px 0; */
+  color: #fff;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    /* margin-top: 7px; */
+    margin-left: 80px;
+    font-size: 22px;
+    /* padding: 1rem; */
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+/* Bubble effect */
+.bubbles {
+  position: fixed; /* Fixed positioning to stay in place relative to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allow clicks to pass through */
+  z-index: -1;
+  overflow: hidden; /* Hide any bubbles that go out of bounds */
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  animation: float 15s ease-in-out infinite;
+  opacity: 0.5;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100%) scale(0.5);
+  }
+  50% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-100%) scale(0.5);
+  }
+}
+
+/* Question container */
+.question {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Specific background colors for questions */
+.bg-color-1 {
+  background-color: #e6f7ff; /* Light blue */
+}
+
+.bg-color-2 {
+  background-color: #fff7e6; /* Light orange */
+}
+
+.bg-color-3 {
+  background-color: #e6ffe6; /* Light green */
+}
+
+.bg-color-4 {
+  background-color: #ffe6f7; /* Light pink */
+}
+
+.bg-color-5 {
+  background-color: #f7e6ff; /* Light purple */
+}
+
+/* Container styling with bubbles */
+#quiz-container {
+  position: relative;
+  width: 800px;
+  margin: 30px auto;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  padding: 20px 0;
+  border-radius: 10px;
+  /* background-color: #fff; */
+  overflow: hidden; /* Hide overflowing bubbles */
+}
+@media (max-width: 1024px) {
+  #quiz-container {
+  margin-top: 60px;
+
+  }
+}
+
+/* styling select the quiz */
+p.select-quiz {
+  font-size: 2.5rem; /* Large font size for prominence */
+  color: #ffffff; /* White color for contrast */
+  text-align: center; /* Center text horizontally */
+  font-weight: bold; /* Make the text bold */
+  letter-spacing: 2px; /* Add some spacing between letters for a more stylish look */
+  text-transform: uppercase; /* Make all letters uppercase */
+  background: linear-gradient(135deg, #4b79a1 0%, #283e51 100%);
+  padding: 20px 40px; /* Padding around the text */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Shadow for a 3D effect */
+  display: inline-block; /* Makes the element shrink to fit the text content */
+  margin: 20% auto;
+  margin-left: 12%;
+  position: relative; /* Position it relative to the parent container */
+  animation: pulse 2s infinite; /* Add a subtle pulsing animation */
+}
+@media (max-width: 786px) {
+  p.select-quiz {
+    margin-right: 10%;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Question heading */
+.question h2 {
+  font-size: 1.3em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Options styling */
+.options {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.options .icon {
+  /* margin-right: 5px;   */
+  float: right;
+  font-size: 25px;
+  padding: 5px 0 0 0;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.options label:hover {
+  background-color: #e0e0e0;
+}
+
+/* total score styling */
+#score-container {
+  padding: 10px;
+  /* background: linear-gradient(135deg, #4CAF50, #8BC34A); */
+  /* background-color: #333; */
+  /* background: linear-gradient(135deg, #FFD700, #FF8C00, #FFD700); */
+  /* background: linear-gradient(135deg, #32CD32, #7CFC00, #32CD32); */
+  background: linear-gradient(135deg, #1e90ff, #00bfff, #1e90ff);
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  #quiz-container {
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .question h2 {
+    font-size: 1.1em;
+  }
+  .result {
+    font-size: 1em;
+  }
+}

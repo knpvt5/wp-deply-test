@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- marked library -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+
+    <base href="/frontend/wp-chatbots/wp-url-cb/" />
+    <link rel="stylesheet" href="wp-url-cb.css" />
+    <title>WealthPsychology ChatBot</title>
+  </head>
+  <body id="wp-url-cb-page">
+    <div id="wp-chatbot">
+      <div id="responseArea">
+        <div class="suggested-question-box">
+          <p class="suggested-question one">What is this site about?</p>
+          <p class="suggested-question two">What modules are available in this site?</p>
+          <p class="suggested-question two">Give the contact info about this site!</p>
+        </div>
+      </div>
+      <div class="chat-input-container">
+        <textarea id="userInput" placeholder="Ask a question..."></textarea>
+        <button id="askBtn">Ask</button>
+      </div>
+      <div id="scrapResponseArea"></div>
+      <div class="chatbot-down-space">
+      <button id="scrapeBtn">Scrape</button>
+      <p>I will only answer based on WealthPsychology website data</p>
+      </div>
+    </div>
+
+    <script src="wp-url-cb.js"></script>
+  </body>
+</html>

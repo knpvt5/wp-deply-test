@@ -1,0 +1,178 @@
+/*Global Navigation styles--------------------------------------------- */
+nav {
+  background-color: #000000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+/* .brand-logo-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+} */
+
+.brand-logo {
+  height: 70px;
+  width: auto;
+  top: 10px;
+  left: 0px;
+  position: absolute;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end; /* Align items at the bottom */
+  justify-content: center; /* Center items horizontally */
+  height: 100px;
+}
+
+nav ul li a {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-right: 15px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Light white background */
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  color: lightyellow;
+}
+
+nav ul li .active {
+  background-color: rgba(255, 255, 255, 0.2); /* Light white background */
+  padding: 8px 10px;
+  color: lightyellow;
+  transform: scale(1.05); /* Slight zoom effect */
+  /* text-decoration: underline; */
+}
+
+/* Hamburger menu styles-------------------------------------------------- */
+.menu-toggle {
+  display: none; /* not to show in pc size */
+}
+
+/* Styles for when the menu is active */
+.menu-toggle.bar-active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.bar-active .bar:nth-child(2) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  /* opacity: 0; */
+}
+
+.menu-toggle.bar-active .bar:nth-child(3) {
+  /* transform: rotate(-45deg) translate(5px, -5px); */
+  opacity: 0;
+}
+
+/* Mobile view nav styling for smaller screen */
+@media (max-width: 768px) {
+  .brand-logo {
+    height: 50px;
+    width: auto;
+    top: 1px;
+    left: 1px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    float: right;
+    margin-right: 10px;
+    width: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-toggle .bar {
+    height: 3px;
+    width: 30px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  nav {
+    height: 53px;
+  }
+
+  .nav-menu {
+    /* display: none; */
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    top: -500px;
+    left: 0;
+    background-color: #333;
+    z-index: 1000;
+    transition: top 0.5s ease-in-out;
+  }
+
+  .nav-menu.active {  
+    display: flex;
+    top: 50px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+
+  nav ul li a {
+    width: 100%;
+    padding: 12px 16px;
+    align-items: center;
+    text-align: left;
+    transition: color 0.3s ease; 
+  }
+
+  nav ul li .active {
+    background-color: #bbb;
+    color: #000;
+    text-decoration: none;
+  }
+}
+
+/*only for blog and finance-news page nav css */
+#blog-page nav ul,
+#financial-calculators-page nav ul {
+  margin-top: -80px;
+}
+
+@media (max-width: 768px) {
+  #blog-page .nav-menu,
+  #financial-calculators-page .nav-menu {
+    margin-top: 0px;
+  }
+}

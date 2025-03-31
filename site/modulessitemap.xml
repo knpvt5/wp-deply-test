@@ -1,0 +1,55 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2016/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <url>
+        <loc>https://wealthpsychology.in/modules/stock-market/</loc>
+        <lastmod>2024-10-03</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://wealthpsychology.in/modules/mutual-funds/</loc>
+        <lastmod>2024-10-03</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://wealthpsychology.in/modules/fundamental-analysis/</loc>
+        <lastmod>2024-10-03</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://wealthpsychology.in/modules/technical-analysis/</loc>
+        <lastmod>2024-10-03</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://wealthpsychology.in/modules/ipo-analysis/</loc>
+        <lastmod>2024-10-03</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://wealthpsychology.in/modules/economic-analysis/</loc>
+        <lastmod>2024-10-03</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://wealthpsychology.in/modules/sector-analysis/</loc>
+        <lastmod>2024-10-03</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://wealthpsychology.in/modules/money-market/</loc>
+        <lastmod>2024-10-03</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://wealthpsychology.in/modules/concentrated-investing/</loc>
+        <lastmod>2024-10-03</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://wealthpsychology.in/modules/cryptocurrency/</loc>
+        <lastmod>2024-10-03</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+</urlset>

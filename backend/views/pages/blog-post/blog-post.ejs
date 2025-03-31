@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Dynamic Title and SEO Meta Tags -->
+    <link rel="icon" href="/global/icons/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="<%= metaDescription %>" />
+    <meta name="keywords" content="<%= metaKeywords %>" />
+    <meta name="author" content="WealthPsychology, karan" />
+    <meta name="robots" content="index, follow" />
+
+    <!--Dynamically  Open Graph Meta Tags -->
+    <meta property="og:title" content="<%= postTitle %>" />
+    <meta property="og:description" content="<%= metaDescription %>" />
+    <meta property="og:image" content="<%= imageUrl %>" />
+    <meta property="og:url" content="<%= blogUrl %>" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<%= postTitle %>" />
+    <meta name="twitter:description" content="<%= metaDescription %>" />
+    <meta name="twitter:image" content="<%= imageUrl %>" />
+    <meta name="twitter:url" content="<%= blogUrl %>" />
+    <meta name="twitter:site" content="@ka_r_an5" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="<%= blogUrl %>" />
+
+    <!-- Additional Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="googlebot" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- google adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3313367090549858" crossorigin="anonymous"></script>
+    <!-- google ads meta tag -->
+    <meta name="google-adsense-account" content="ca-pub-3313367090549858" />
+
+    <!-- Google tag (gtag.js) for analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L4D1L8LGWZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-L4D1L8LGWZ');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WHZ2FFNC');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="icon" href="/assets/branding/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="/frontend/components/navbar/nav.css" />
+    <link rel="stylesheet" href="/frontend/components/footer/footer.css" />
+    <script defer src="/frontend/components/themes/dark-mode-toggle.js"></script>
+
+    <link rel="stylesheet" href="/backend/views/pages/blog-post/blog-post.css" />
+    <title><%= postTitle %></title>
+  </head>
+
+  <body id="blog-post-page">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHZ2FFNC" height="0" width="0" style="display: none; visibility: hidden"></iframe> </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Include Header Partial -->
+    <%- include('../../components/header') %>
+
+    <main>
+      <div id="post-container">
+        <aside class="recent-posts">
+          <h2>Recent Posts</h2>
+          <div class="recent-posts-wrapper">
+            <!-- related post goes here -->
+          </div>
+        </aside>
+
+        <article class="full-blog-post">
+          <h1><%- post.title %></h1>
+          <p><%= new Date(post.publishedDate).toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' }) %></p>
+
+          <script>
+            var postCategory = '<%= post.category %>';
+          </script>
+
+          <!-- Render rich text content -->
+          <div><%- renderPostRichTextHtml %></div>
+          <a href="javascript:history.back()" class="back"><i class="fa-solid fa-caret-left"></i>Back</a>
+          <button type="button" id="share-button"><i class="fa-solid fa-share-nodes"></i> Share</button>
+        </article>
+
+        <aside class="related-posts">
+          <h2>Related Posts</h2>
+          <div class="related-posts-wrapper">
+            <!-- related post goes here -->
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Custom url chatbot -->
+    <div id="wp-cb-container">
+      <!-- chatbot fetches here dynamically -->
+    </div>
+
+    <!-- Include Footer Partial -->
+    <%- include('../../components/footer') %>
+
+    <script src="/frontend/wp-chatbots/wp-url-cb/wp-url-iframe-cb.js" defer></script>
+    <script src="/frontend/components/navbar/nav.js"></script>
+    <script src="/backend/views/pages/blog-post/blog-post.js" ></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+#wp-url-iframe-cb {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 95vw;
+  max-width: 450px;
+  height: 100vh;
+  max-height: 700px;
+  background-color: transparent;
+  display: none;
+  border: none;
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+#wp-url-cb-logo {
+  height: 55px;
+  width: 55px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

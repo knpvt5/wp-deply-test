@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="/assets/branding/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <base href="/frontend/wealth-sense/smart-trading/">
+    <link rel="stylesheet" href="smart-trading.css" />
+    <title>Smart Trading</title>
+  </head>
+  <header>
+    <div class="brand-logo-container">
+      <a href="/index.html">
+        <img src="/assets/branding/logo.webp" alt="Brand Logo" class="brand-logo" />
+      </a>
+    </div>
+    <h1>Smart Trading</h1>
+  </header>
+
+  <body>
+    <!-- Bubble effect -->
+    <div class="bubbles">
+      <!-- Generate 20 bubble elements -->
+      <div class="bubble bubble-1"></div>
+    </div>
+    
+    <main>
+      <div id="smart-trading-container">
+        <!-- content goes here -->
+      </div>
+
+      <div class="st-button-container">
+        <a href="/wise-investing/" class="st-button">Wise Investing</a>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="/frontend/components/footer/footer.js" ></script>
+    <script src="smart-trading.js"></script>
+    <script src="/frontend/partials/headerscroll.js"></script>
+    <script defer src="/frontend/components/themes/dark-mode-toggle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,815 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+html {
+  scroll-behavior: smooth; /*this will let us get to the target in smooth scrolling way instead of directly showing*/
+  scroll-padding-top: 130px;
+}
+
+/* body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 0;
+  margin: 0;
+  /* background: linear-gradient(135deg, #ddd8d0 0%, #b8b5ac 100% ); */
+}
+
+body.dark-mode {
+  background-color: #aaa;
+}
+
+/* Header styles */
+header {
+  background-color: #000000;
+  text-align: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 998;
+}
+
+/* header h1 {
+  font-size: 2rem;
+  background: linear-gradient(to right, blue 0%, cyan 14.28%, orange 28.56%, red 42.84%, yellow 57.12%, brown 71.4%, green 85.68%, lightblue 100%);
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+} */
+
+/* Navigation styles via global nav css */
+
+/*css moving animations and styling */
+
+/* dark-bookmark-auth-container css */
+/* .dark-bookmark-auth-container {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  top: 15px;
+  right: 25px;
+} */
+
+.dark-bookmark-auth-container {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .dark-bookmark-auth-container {
+    top: 7px;
+    right: 60px;
+  }
+}
+
+.wrapper {
+  /* z-index: 1000; */
+  background-color: #ccc;
+  width: 100%;
+  margin-inline: auto;
+  margin-top: 103px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+}
+
+.item {
+  width: auto;
+  min-width: 250px;
+  padding: 0 30px;
+  height: 50px;
+  display: inline-flex;
+  white-space: nowrap;
+  font-size: 25px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-weight: bolder;
+  border-radius: 10px;
+  position: absolute;
+  left: 100%;
+  animation-name: scrollLeft;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.item1 a {
+  text-decoration: none;
+  background: -webkit-linear-gradient(to right, navy, darkblue);
+  background: linear-gradient(to right, navy, darkblue); /* Navy to Dark Blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.item2 a {
+  text-decoration: none;
+  background: -webkit-linear-gradient(to right, darkred, firebrick);
+  background: linear-gradient(to right, darkred, firebrick); /* Dark Red to Brick Red */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.item3 a {
+  text-decoration: none;
+  background: -webkit-linear-gradient(to right, darkgoldenrod, sienna);
+  background: linear-gradient(to right, darkgoldenrod, sienna); /* Dark Goldenrod to Sienna */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.item4 a {
+  text-decoration: none;
+  background: -webkit-linear-gradient(to right, darkgreen, olive);
+  background: linear-gradient(to right, darkgreen, olive); /* Dark Green to Olive */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.item5 a {
+  text-decoration: none;
+  background: -webkit-linear-gradient(to right, darkviolet, indigo);
+  background: linear-gradient(to right, darkviolet, indigo); /* Dark Violet to Indigo */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.item6 a {
+  text-decoration: none;
+  background: -webkit-linear-gradient(to right, darkcyan, darkslategray);
+  background: linear-gradient(to right, darkcyan, darkslategray); /* Dark Cyan to Dark Slate Gray */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.item7 a {
+  text-decoration: none;
+  background: -webkit-linear-gradient(to right, midnightblue, darkslateblue);
+  background: linear-gradient(to right, midnightblue, darkslateblue); /* Midnight Blue to Dark Slate Blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.item8 a {
+  text-decoration: none;
+  background: -webkit-linear-gradient(to right, darkred, darkorange);
+  background: linear-gradient(to right, darkred, darkorange); /* Dark Red to Dark Orange */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.item a:hover {
+  background: none; /* Remove gradient background */
+  -webkit-background-clip: initial; /* Reset background clip */
+  background-clip: initial; /* Define standard property for compatibility */
+  color: #000;
+  -webkit-text-fill-color: #000;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-150vw);
+  }
+}
+
+.item1 {
+  animation-delay: 0s;
+}
+
+.item2 {
+  animation-delay: 1.875s;
+}
+
+.item3 {
+  animation-delay: 3.75s;
+}
+
+.item4 {
+  animation-delay: 5.625s;
+}
+
+.item5 {
+  animation-delay: 7.5s;
+}
+
+.item6 {
+  animation-delay: 9.375s;
+}
+
+.item7 {
+  animation-delay: 11.25s;
+}
+
+.item8 {
+  animation-delay: 13.125s;
+}
+
+@media (max-width: 1300px) {
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-210vw); /* For medium screens */
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-270vw); /* For medium screens */
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-300vw); /* For medium screens */
+    }
+  }
+  .wrapper {
+    width: 100%;
+    margin-top: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-500vw); /* Increased to ensure full passage */
+    }
+  }
+  .wrapper {
+    width: 100%;
+    margin-top: 56px;
+  }
+
+  .item {
+    height: 50px;
+  }
+}
+
+/*home-page nav styling */
+
+/* Cart icon and container styling via global cart CSS------------------------------------*/
+
+/* new feature prompt styling------------------- */
+#newFeaturePrompt {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* margin: 0 40%; */ /*it can also be used to center but it wrap the text specifically adjust for different screen*/
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#newFeaturePrompt p {
+  padding: 5px 20px 0px 20px;
+  background: contain;
+}
+
+#newFeaturePrompt button {
+  background-color: #007bff;
+  float: right;
+  color: white;
+  border: none;
+  margin: -5px 25px 15px auto;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 468px) {
+  #newFeaturePrompt {
+    width: 80%;
+  }
+}
+
+/* home header images styling */
+.home-image1 {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 3px;
+  padding: 0;
+  position: relative;
+  /* overflow: hidden; */
+  z-index: 2;
+}
+
+.home-image2 {
+  display: none;
+}
+
+@media (max-width: 476px) {
+  .hometopimg2 {
+    background-color: #000;
+    margin-top: 3px;
+  }
+
+  .home-image1 {
+    display: none;
+  }
+
+  .home-image2 {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* main styling------- */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 50px 0;
+  background: linear-gradient(135deg, #ccc 0%, #bbb 50%, #aaa 100%);
+  /* background: linear-gradient(135deg, #d4d3cf 0%, #bab8b3 50%,#a2a19e 100%); */
+  border-radius: 0 0 20px 20px;
+}
+
+body.dark-mode .home-page {
+  background: #444;
+}
+
+.central-line {
+  width: 5px;
+  height: 2061px;
+  top: -100px; /* Move the line 100px higher */
+  background-color: black;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  /* z-index: 1; */
+}
+body.dark-mode .central-line {
+  background-color: #aaa;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1), inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.content::before {
+  content: '';
+  width: 100px;
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: width 0.3s ease;
+}
+body.dark-mode .content::before {
+  background-color: #aaa;
+}
+
+.content:hover {
+  transform: scale(1.05);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.5);
+}
+
+.content:hover::before {
+  width: 83px; /* 100px / 1.05 */
+}
+
+/* .content:nth-child(odd) {
+  flex-direction: row-reverse; 
+}  it is important if we want to reverse the text and image position */
+
+.content:nth-child(odd)::before {
+  right: 100%;
+}
+
+.content:nth-child(even)::before {
+  left: 100%;
+}
+
+/* .content1{
+  width: 500px;
+  margin-left: -700px;
+}
+.content2{
+  width: 500px;
+  margin-right: -700px;
+} */
+
+.content:nth-child(odd) {
+  width: 500px;
+  margin-left: 700px;
+}
+.content:nth-child(even) {
+  width: 500px;
+  margin-right: 700px;
+}
+
+/* inside content styling */
+.content {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .content {
+  box-shadow: 6px 6px 12px #111111, -6px -6px 120px #777; /* offset-x offset-y blur-radius color */
+}
+
+.content1 {
+  background-color: #444444;
+}
+.content1 h2,
+.content1 p {
+  color: #fff !important;
+}
+
+.content2 {
+  background-color: rgb(212, 210, 56);
+}
+
+.content3 {
+  background-color: rgb(186, 215, 70);
+}
+
+.content4 {
+  background-color: rgb(180, 25, 172);
+}
+.content4 h2,
+.content4 p {
+  color: #fff !important;
+}
+
+.content5 {
+  background-color: rgb(65, 193, 200);
+}
+
+.content6 {
+  background-color: rgb(219, 165, 40);
+}
+
+.content7 {
+  background-color: rgb(140, 0, 112);
+}
+.content7 h2,
+.content7 p {
+  color: #fff !important;
+}
+
+.content8 {
+  background-color: rgb(81, 206, 81);
+}
+
+.content9 {
+  background-color: rgb(202, 206, 81);
+}
+
+.content10 {
+  background-color: rgb(192, 29, 29);
+}
+.content10 h2,
+.content10 p {
+  color: #fff !important;
+}
+
+.content img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px 0 0 15px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.content h2 {
+  border-bottom: 1.5px solid #fff;
+  text-align: center;
+  margin-top: 15px;
+  padding-bottom: 2.5px;
+  font-size: larger;
+}
+
+.content p {
+  color: #000000;
+  /* font-weight: bold; */
+  padding: 0 20px;
+  margin-top: -10px;
+  padding-bottom: 0;
+  /* display: flex;
+  gap: 5px;  */
+  justify-content: center;
+}
+
+.content .buttons {
+  display: flex;
+  gap: 0px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.content .contentbtn {
+  font-weight: bold;
+  width: 110px;
+  margin: 5px 10px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.rlbtn {
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #117a29;
+  box-shadow: 0 3px #28a745;
+  transition: all 0.2s ease;
+}
+
+.rlbtn:active {
+  box-shadow: 0 0px; /* Move shadow up to create pressed effect */
+  transform: translateY(2px); /* Move the button down slightly */
+}
+
+.rlbtn:hover {
+  text-decoration: underline 1.5px #fff;
+  text-underline-offset: 1px;
+}
+
+.lmbtn {
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #09396d;
+  box-shadow: 0 2px #225e9f;
+  transition: all 0.2s ease;
+}
+
+.lmbtn:active {
+  box-shadow: 0 0px; /* Move shadow up to create pressed effect */
+  transform: translateY(2px); /* Move the button down slightly */
+}
+
+.lmbtn:hover {
+  text-decoration: underline 1.5px #fff;
+  text-underline-offset: 1px;
+}
+
+/* quizzes selection last part styling--------------- */
+.wealth-sense {
+  margin: 10px 0px;
+  border-radius: 20px;
+  background-color: #c5c588;
+  padding: 1px 10px;
+}
+
+.imp-tips {
+  background-color: #000;
+  color: #fff;
+  width: 400px;
+  margin: 40px auto;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+.tips {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  gap: 150px;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.tips p a {
+  padding: 20px 40px;
+  border: 2px solid black;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #ddd;
+}
+
+.tips :hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* 1200px  Mobile responsive styling */
+@media (max-width: 1200px) {
+  .central-line {
+    height: 1985px;
+  }
+
+  .content::before {
+    content: '';
+    width: 50px;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: width 0.3s ease;
+  }
+
+  .content:hover::before {
+    width: 41px;
+  }
+
+  .content:nth-child(odd) {
+    width: 400px;
+    margin-left: 500px;
+  }
+  .content:nth-child(even) {
+    width: 400px;
+    margin-right: 500px;
+  }
+
+  .content img {
+    width: 100px !important;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10%;
+  }
+}
+
+/* 920px  Mobile responsive styling */
+@media (max-width: 920px) {
+  .central-line {
+    height: 2010px;
+  }
+
+  .content::before {
+    content: '';
+    width: 50px;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: width 0.3s ease;
+  }
+
+  .content:hover::before {
+    width: 40px;
+  }
+
+  .content:nth-child(odd) {
+    width: 290px;
+    margin-left: 390px;
+  }
+  .content:nth-child(even) {
+    width: 290px;
+    margin-right: 390px;
+  }
+
+  .content img {
+    display: none;
+  }
+
+  .tips {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wealth-sense {
+    /* margin: 15px; */
+    padding: 1px 20px;
+    border-radius: 20px;
+  }
+  .imp-tips {
+    width: 90%;
+  }
+  .tips {
+    gap: 20px;
+  }
+}
+
+/* 690px  Mobile responsive styling */
+@media (max-width: 690px) {
+  .home-page {
+    padding: 30px 10px;
+    max-width: 100%;
+  }
+
+  .central-line {
+    display: none;
+  }
+
+  .content {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .content img {
+    display: block;
+    width: auto !important;
+    height: 250px;
+    margin: 15px 0;
+  }
+
+  .content p {
+    margin: 0 15px 15px;
+    text-align: center;
+  }
+
+  .content::before {
+    display: none;
+  }
+
+  .content:nth-child(odd),
+  .content:nth-child(even) {
+    flex-direction: column;
+    margin: 15px 0;
+  }
+  .content h2 {
+    text-align: center;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    text-decoration: underline 1px #fff;
+    text-underline-offset: 5px;
+    border-bottom: none;
+  }
+
+  .content p {
+    padding: 0 20px;
+    margin-top: -10px;
+  }
+
+  /* .content .buttons {
+    margin-bottom: 15px;
+    gap: 5px;
+  } */
+
+  .content .contentbtn {
+    width: 110px;
+    margin: 0px 10px;
+    padding: 10px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content:nth-child(odd),
+  .content:nth-child(even) {
+    width: 100%;
+  }
+}
+
+/* Footer styles via global footer css */

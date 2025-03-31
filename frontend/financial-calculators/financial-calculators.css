@@ -1,0 +1,131 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* full Body styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #aaa;
+}
+
+body.dark-mode {
+  background-color: #444;
+}
+
+/* Header styles */
+header {
+  /* background-color: #000; */
+  text-align: center;
+  /* padding: 0; */
+  /* position: relative;  */
+  /* top: 0; */
+  /* left: 0; */
+  /* min-width: 100%;  */
+  /* z-index: 998; */
+}
+
+header h1 {
+  font-size: 25px;
+  /* padding: 5px 0; */
+  color: #fff;
+  font-weight: bold;
+  margin-top: 9px;
+  margin-bottom: 35px;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    margin-top: 7px;
+    margin-left: 50px;
+    font-size: 32px;
+    /* padding: 1rem; */
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+/* finance-nav styling via  finance-nav.css*/
+
+/* General Styles for Main Section */
+
+#financial-calculators-container {
+  margin-top: 120px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.financial-calculators-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.financial-calculators-grid img {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  animation: shadowPulse 3s ease-in-out infinite;
+}
+
+body.dark-mode .financial-calculators-grid img {
+  filter: brightness(0.8);
+}
+
+.financial-calculators-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes shadowPulse {
+  0% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .financial-calculators-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .financial-calculators-grid {
+    grid-template-columns: 1fr;
+    justify-items: center; /* Center items in the grid */
+    gap: 50px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+    margin-top: 11px;
+    margin-left: 90px;
+    text-align: center; /* Center the header text */
+  }
+
+  #financial-calculators-container {
+    margin-top: 55px;
+    margin-bottom: 20px;
+  }
+
+  .financial-calculators-grid img {
+    margin: 0 auto;
+    width: 280px;
+    display: block; /* Ensure the image is a block-level element */
+  }
+}
+
+/* Footer styles via global footer css */

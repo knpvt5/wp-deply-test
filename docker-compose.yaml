@@ -1,0 +1,18 @@
+
+services:
+  server:
+    build:
+      context: .
+    volumes:
+      - .:/usr/src/app 
+    environment:
+      NODE_ENV: production
+      CONTENTFUL_SPACE_ID: ${CONTENTFUL_SPACE_ID}
+      CONTENTFUL_ACCESS_TOKEN: ${CONTENTFUL_ACCESS_TOKEN}
+      WS_DB_HOST: ${WS_DB_HOST}
+      WS_DB_PORT: ${WS_DB_PORT}
+      WS_DB_USER: ${WS_DB_USER}
+      WS_DB_PASSWORD: ${WS_DB_PASSWORD}
+      WS_DB_DATABASE: ${WS_DB_DATABASE}
+    ports:
+      - 55555:55555

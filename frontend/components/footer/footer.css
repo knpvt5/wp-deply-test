@@ -1,0 +1,168 @@
+footer {
+  background-color: #000000;
+  padding: 10px 200px; /* Add horizontal padding for left and right spacing */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto auto;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  gap: 30px;
+  color: #fff;
+  column-gap: 100px; /* Increase gap between columns for better spacing */
+}
+
+footer div {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer h3 {
+  margin-bottom: 0px;
+}
+
+footer .footer-link {
+  color: #4693ff;
+  text-decoration: none;
+}
+
+footer p {
+  margin-top: 3px;
+}
+
+footer .col br {
+  content: '';
+  display: block;
+  margin-bottom: 3px;
+}
+
+footer .footer-link:hover {
+  text-decoration: underline;
+}
+
+footer .social-links a,
+footer .broker-links a {
+  margin-right: 5px;
+}
+
+footer .social-links a .fa-brands {
+  display: inline-block;
+  font-size: 26px;
+  margin-top: 3px;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+footer .social-links a .fa-brands:hover {
+  transform: scale(1.1);
+}
+
+footer .social-links a .fa-instagram:hover {
+  color: #fff;
+  background: linear-gradient(45deg, #833ab4, #fd1d1d, #f56040, #fcaf45);
+  border-radius: 50%;
+  padding: 0;
+}
+
+footer .social-links a .fa-youtube:hover {
+  color: red;
+}
+
+footer .social-links a .fa-twitter:hover {
+  color: #fff;
+  background: #0077b5;
+  border-radius: 50%;
+  transition: 0.3s ease, color 0.1s ease;
+}
+
+footer .social-links a .fa-linkedin:hover {
+  color: #0077b5;
+}
+
+footer .broker-account {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 0px;
+  font-size: 1.3em;
+}
+
+footer .broker-account img {
+  height: 40px;
+  width: 200px;
+  margin: 0 10px;
+  margin-top: 10px;
+}
+
+footer .broker-account .broker-links a:nth-child(2) img {
+  height: 35px;
+  width: 180px;
+}
+
+footer .broker-links img {
+  transition: transform 0.3s ease-in-out;
+}
+
+footer .broker-links img:hover {
+  transform: scale(0.9);
+}
+
+footer .footer-link i.fa-solid {
+  font-size: 14px;
+  color: #4693ff;
+}
+
+footer .legal {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: -10px;
+}
+
+@media (max-width: 1200px) {
+  footer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+
+  footer .broker-account {
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+
+  footer .col-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  footer .col-2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  footer .col-3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  footer .col-4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  footer .col-5 {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+  }
+}

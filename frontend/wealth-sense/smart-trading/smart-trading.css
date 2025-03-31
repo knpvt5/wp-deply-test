@@ -1,0 +1,260 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+body.dark-mode {
+    background-color: #222;
+    color: #e0e0e0;
+  }
+
+/* Header styles */
+header {
+    background-color: #000;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: transform 0.3s ease; 
+    z-index: 1000;
+}
+  
+header h1 {
+    font-size: 30px;
+    color: #fff;
+    margin-top: 10px;
+    padding-top: 5px;
+}
+  
+.brand-logo {
+    height: 60px;
+    width: auto;
+    top: 5px;
+    left: 5px;
+    position: absolute;
+}
+  
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 27px;
+        margin-left: 40px;
+    }
+    .brand-logo {
+        height: 50px;
+        width: auto;
+        top: 5px;
+        left: 0px;
+    }
+}
+
+/* Bubble effect */
+.bubbles {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    animation: float 15s ease-in-out infinite;
+    opacity: 0.5;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(100%) scale(0.5);
+    }
+    50% {
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      transform: translateY(-100%) scale(0.5);
+    }
+  }
+
+
+/* General Styles for the Container */
+#smart-trading-container {
+    max-width: 750px; 
+    margin: 20px auto; 
+    margin-top: 80px;
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+body.dark-mode #smart-trading-container {
+    background-color: #444; 
+    border: 1px solid #666; 
+}
+
+/* Skeleton Container */
+/* .skeleton-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+} */
+
+/* Skeleton Item */
+.skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #e0e0e0; 
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+body.dark-mode .skeleton {
+    background-color: #000000; 
+}
+
+/* Skeleton Image Placeholder */
+.skeleton-image {
+    width: 90%;
+    height: 100px; 
+    background-color: #eee; 
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Skeleton Text Placeholder */
+.skeleton-text {
+    width: 100%;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+body.dark-mode .skeleton-image, 
+body.dark-mode .skeleton-text {
+    background-color: #555;
+}
+
+/* Short Skeleton Text */
+.skeleton-text.short {
+    width: 50%; 
+}
+
+/* Sliding Animation */
+.skeleton::before,
+.skeleton-image::before,
+.skeleton-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150px; 
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+    animation: skeleton-loading 1.5s infinite;
+}
+
+/* Keyframes for Sliding Effect */
+@keyframes skeleton-loading {
+    0% {
+        left: -150px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Styles for Each Investing Entry */
+.smart-trading {
+    margin-bottom: 20px; 
+    padding: 15px;
+    background-color: #ffffff; 
+    border: 1px solid #e1e1e1; 
+    border-radius: 5px; 
+    transition: box-shadow 0.3s ease; 
+}
+body.dark-mode .smart-trading {
+    background-color: #1e1e1e; 
+    border: 1px solid #444; 
+}
+
+/* Hover Effect for Each Entry */
+.smart-trading:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* Styles for the Title */
+.smart-trading h3 {
+    margin: 0 0 10px; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem; 
+    color: #333; 
+}
+body.dark-mode .smart-trading h3 {
+    color: #e0e0e0; 
+}
+
+/* Styles for the Category */
+.smart-trading p {
+    margin: 5px 0; 
+    color: #555; 
+}
+body.dark-mode .smart-trading p {
+    color: #bbb; 
+}
+
+/* Styles for the Content */
+.content {
+    font-size: 1rem; 
+    line-height: 1.5; 
+}
+
+.tags,
+.created-at, 
+.category {
+    font-size: 0.9rem !important;
+    color: #999 !important;
+    margin-top: 20px;
+}
+body.dark-mode .tags,
+body.dark-mode .created-at, 
+body.dark-mode .category {
+    color: #777 !important; 
+}
+
+/* Center the button container */
+.st-button-container {
+    display: flex;            
+    justify-content: center;   
+    align-items: center; 
+    margin-bottom: 20px;        
+}
+
+/* Style for the button */
+.st-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007BFF; 
+    text-align: center;
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+
+.st-button:hover {
+    background-color: #0056b3; 
+}
