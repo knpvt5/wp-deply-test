@@ -14,7 +14,7 @@ router.get('/finance-news', (req, res) => {
 });
 
 router.get('/blog', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../frontend/blog/blog.html'));
+  res.sendFile(path.join(__dirname, '../../public/blog/blog.html'));
 });
 
 router.get('/financial-calculators', (req, res) => {
@@ -29,7 +29,7 @@ router.get('/frontend/quizzes/', (req, res) => {
 });
 
 router.get('/contact-us', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../frontend/contact-us/contact-us.html'));
+  res.sendFile(path.join(__dirname, '../../public/contact-us/contact-us.html'));
 });
 
 router.get('/about-us', (req, res) => {
